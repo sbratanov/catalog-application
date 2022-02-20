@@ -1,0 +1,51 @@
+<section class="layout-container">
+    <div class="layout-header">
+        <div class="layout-header-content">
+            {{data.name}}
+        </div>
+        <div class="layout-header-actions">
+            <button class="button" color="info">Save</button>
+        </div>
+    </div>
+
+    <div class="layout-body">
+        <div class="content-description">
+            <strong>
+                Basic Information
+            </strong>
+            <div class="hint">Some basic information about catalog item</div>
+        </div>
+
+        <form [formGroup]="detailForm">
+            <div class="form-field">
+                <label>ID</label>
+                <input type="number" formControlName="id">
+            </div>
+            <div class="form-field">
+                <label>Name</label>
+                <input type="text" formControlName="name">
+            </div>
+            <div class="form-field">
+                <label>Value</label>
+                <input type="text" formControlName="value">
+            </div>
+            <div class="form-field control-list">
+                <label>Variants</label>
+                <div class="form-field-control-list-container">
+                    <div class="form-field-control-list-item">
+                        <input type="checkbox" formControlName="variant_1">
+                        Variant 1
+                    </div>
+                    <div class="form-field-control-list-item">
+                        <input type="checkbox" formControlName="variant_2">
+                        Variant 2
+                    </div>
+                    <div class="form-field-control-list-item">
+                        <input type="checkbox" formControlName="variant_3">
+                        Variant 3
+                    </div>
+                </div>               
+            </div>
+        </form>
+    </div>
+  </section>

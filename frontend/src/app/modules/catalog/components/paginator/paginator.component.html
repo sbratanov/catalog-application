@@ -1,0 +1,25 @@
+<div class="ui-paginator">
+  <button class="button" color="default" 
+  [ngClass]="{ 'ui-state-disabled': page === 0 }" 
+  [attr.tabindex]="page === 0 ? '-1' : '0'"
+  (click)="changePageToPrev()" 
+  (keydown.enter)="changePageToPrev()">
+    Previous
+  </button>
+
+  <span class="ui-paginator-pages">
+    <a *ngFor="let pageLink of pageLinks" tabindex="0" 
+    class="ui-paginator-page ui-paginator-element"
+    [ngClass]="{ 'ui-state-active': pageLink - 1 === page }"
+    (click)="onPageLinkClick(pageLink - 1)"
+    (keydown.enter)="onPageLinkClick(pageLink - 1)">{{ pageLink }}</a>
+  </span>
+
+  <button class="button" color="default" 
+  [ngClass]="{ 'ui-state-disabled': page === pagesCount - 1}"
+  [attr.tabindex]="page === pagesCount - 1 ? '-1' : '0'" 
+  (click)="changePageToNext()" 
+  (keydown.enter)="changePageToNext()">
+    Next
+  </button>
+</div>

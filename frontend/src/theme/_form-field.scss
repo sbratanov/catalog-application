@@ -1,0 +1,52 @@
+@import './colors';
+
+.form-field {
+    margin-bottom: 40px;
+    display: flex;
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+
+    label {
+        line-height: 38px;
+        min-width: 80px;
+        display: inline-block;
+        font-size: 14px;
+        color: $text-label-color;
+    }
+
+    input {
+        &:not([type=checkbox]){
+            min-width: 320px;
+            margin-left: 20px;
+            height: 38px;
+            background: $white;
+            border: 1px solid $border-color;
+            box-sizing: border-box;
+            box-shadow: 0px 1px 2px $boxshadow-color;
+            border-radius: 6px;
+            padding: 0 10px;
+        }
+
+        &[type=checkbox]{
+            accent-color: $theme-purple;
+            margin-left: 20px;
+        }
+    }
+
+    &.control-list{
+        label{
+            line-height: 1;
+        }
+    }
+
+    .form-field-control-list-container{
+        display: inline-block;
+        .form-field-control-list-item{
+            display: block;
+            font-size: 14px;
+            color: $text-label-color;
+            padding-bottom: 10px;
+        }
+    }
+}

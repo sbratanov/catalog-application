@@ -1,8 +1,0 @@
-<app-table [content]="content$ | ngrxPush"></app-table>
-
-<app-paginator
-  *ngIf="pagesCount$ | ngrxPush; let pagesCount"
-  [page]="page$ | ngrxPush"
-  [pagesCount]="pagesCount"
-  (onPageChange)="fetchPage($event)"
-></app-paginator>
